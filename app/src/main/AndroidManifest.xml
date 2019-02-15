@@ -1,12 +1,11 @@
 <manifest package="com.jwplayer.opensourcedemo"
           xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools">
-
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:name="com.jwplayer.opensourcedemo.MyApplication"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
@@ -14,7 +13,7 @@
         <activity
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
-            android:name=".JWPlayerViewExample">
+            android:name="com.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -23,10 +22,13 @@
         <activity
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:name=".JWPlayerFragmentExample"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:name=".JWPlayerViewExample"/>
         <!--TODO Set your license key-->
         <meta-data
             android:name="JW_LICENSE_KEY"
-            android:value="YOUR_LICENSE_KEY" />
+            android:value="2ZO2HAA6tPwoIeeqexQpM2ii03I4NJ7XSb9WQCqrpNMK5sR6aRDqlbKjeP8=" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
